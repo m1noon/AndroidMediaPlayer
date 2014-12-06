@@ -1,0 +1,45 @@
+<com.test.sampleandroidmediaplayer.ui.widget.StateFrameLayout
+    android:id="@+id/state_frame_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MediaFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/media_image_height">
+
+            <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/black"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/jobs" />
+
+            <!--<FrameLayout-->
+                    <!--android:id="@+id/episode_detail_header_cover"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="@dimen/media_image_height"-->
+                    <!--android:background="@color/glass_black" />-->
+
+        </RelativeLayout>
+
+        <com.test.sampleandroidmediaplayer.ui.widget.VisualizerView
+            android:id="@+id/visualizer_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:line_color="@color/visualizer_view$line_color"
+            app:bg_color="@color/visualizer_view$bg_color"
+            app:line_width="1"/>
+    </LinearLayout>
+</com.test.sampleandroidmediaplayer.ui.widget.StateFrameLayout>

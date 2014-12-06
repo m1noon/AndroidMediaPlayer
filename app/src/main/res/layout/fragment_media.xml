@@ -1,0 +1,56 @@
+<com.test.sampleandroidmediaplayer.ui.widget.StateFrameLayout
+        android:id="@+id/state_frame_layout"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MediaFragment">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/media_image_height">
+
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/black"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/jobs" />
+
+            <FrameLayout
+                    android:id="@+id/episode_detail_header_cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/media_image_height"
+                    android:background="@color/glass_black" />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                        android:id="@+id/media_control_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/above_shadow"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                    <CheckBox
+                            android:id="@+id/media_play_and_pause_button"
+                            style="@style/MediaPlayAndPauseButton"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/margin_icon_button" />
+
+                    <include layout="@layout/view_media_seekbar" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</com.test.sampleandroidmediaplayer.ui.widget.StateFrameLayout>
